@@ -1,4 +1,4 @@
-package com.notifyflow.notification_ingestion_service;
+package com.notifyflow.ingestion;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

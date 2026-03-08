@@ -1,4 +1,4 @@
-package com.notifyflow.notification_delivery_service;
+package com.notifyflow.delivery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
