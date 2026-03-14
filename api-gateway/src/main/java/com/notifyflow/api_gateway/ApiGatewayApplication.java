@@ -9,7 +9,6 @@ import org.springframework.web.servlet.function.ServerResponse;
 
 import java.net.URI;
 
-import static org.springframework.cloud.gateway.server.mvc.filter.BeforeFilterFunctions.uri;
 import static org.springframework.cloud.gateway.server.mvc.handler.GatewayRouterFunctions.route;
 import static org.springframework.cloud.gateway.server.mvc.handler.HandlerFunctions.http;
 import static org.springframework.cloud.gateway.server.mvc.predicate.GatewayRequestPredicates.path;
@@ -23,9 +22,8 @@ public class ApiGatewayApplication {
 
 	@Bean
 	public RouterFunction<ServerResponse> gatewayRouterFunctions() {
-		return route("rate-limiter-service")
-				.route(path("/notifications/**"), http())
-				.before(uri(URI.create("http://localhost:8081")))
+		return route("ingestion-service")
+				.route(path("/notifications/**"), http(URI.create("http://localhost:8082")))
 				.build();
 	}
 

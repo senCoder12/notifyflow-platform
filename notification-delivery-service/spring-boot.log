@@ -1,0 +1,702 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< com.notifyflow:notification-delivery-service >------------
+[INFO] Building notification-delivery-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.1:run (default-cli) > test-compile @ notification-delivery-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ notification-delivery-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ notification-delivery-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ notification-delivery-service ---
+[INFO] skip non existing resourceDirectory /Users/mayukh/projects/notifyflow-platform/notification-delivery-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ notification-delivery-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.1:run (default-cli) < test-compile @ notification-delivery-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.1:run (default-cli) @ notification-delivery-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2026-03-09T01:04:09.553+05:30  INFO 36765 --- [notification-delivery-service] [           main] d.NotificationDeliveryServiceApplication : Starting NotificationDeliveryServiceApplication using Java 25.0.2 with PID 36765 (/Users/mayukh/projects/notifyflow-platform/notification-delivery-service/target/classes started by mayukh in /Users/mayukh/projects/notifyflow-platform/notification-delivery-service)
+2026-03-09T01:04:09.563+05:30  INFO 36765 --- [notification-delivery-service] [           main] d.NotificationDeliveryServiceApplication : No active profile set, falling back to 1 default profile: "default"
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/mayukh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.34/tomcat-embed-core-10.1.34.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-03-09T01:04:10.187+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-03-09T01:04:10.193+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-09T01:04:10.193+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-03-09T01:04:10.229+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-09T01:04:10.229+05:30  INFO 36765 --- [notification-delivery-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 619 ms
+2026-03-09T01:04:10.580+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-03-09T01:04:10.710+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path '/'
+2026-03-09T01:04:10.724+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-delivery-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = delivery-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-03-09T01:04:10.738+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-03-09T01:04:10.818+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2026-03-09T01:04:10.819+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2026-03-09T01:04:10.819+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1772998450818
+2026-03-09T01:04:10.825+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Subscribed to topic(s): processed-notifications
+2026-03-09T01:04:10.830+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-delivery-group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = delivery-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-03-09T01:04:10.830+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-03-09T01:04:10.838+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2026-03-09T01:04:10.838+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2026-03-09T01:04:10.838+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1772998450837
+2026-03-09T01:04:10.844+05:30  INFO 36765 --- [notification-delivery-service] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Subscribed to topic(s): processed-notifications-retry
+2026-03-09T01:04:10.858+05:30  INFO 36765 --- [notification-delivery-service] [           main] d.NotificationDeliveryServiceApplication : Started NotificationDeliveryServiceApplication in 1.758 seconds (process running for 1.974)
+2026-03-09T01:04:10.938+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Cluster ID: an4HlnjDRvqJGzfDpb9Y3w
+2026-03-09T01:04:10.938+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Cluster ID: an4HlnjDRvqJGzfDpb9Y3w
+2026-03-09T01:04:10.938+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-03-09T01:04:10.938+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-03-09T01:04:10.939+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] (Re-)joining group
+2026-03-09T01:04:10.939+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] (Re-)joining group
+2026-03-09T01:04:10.948+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Request joining group due to: need to re-join with the given member-id: consumer-delivery-group-1-5888888d-2772-4abe-8a57-53c5fade49b5
+2026-03-09T01:04:10.948+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Request joining group due to: need to re-join with the given member-id: consumer-delivery-group-2-fd83f299-a414-4fa0-ac40-0b19d36469f2
+2026-03-09T01:04:10.948+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] (Re-)joining group
+2026-03-09T01:04:10.948+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] (Re-)joining group
+2026-03-09T01:04:13.953+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Successfully joined group with generation Generation{generationId=7, memberId='consumer-delivery-group-2-fd83f299-a414-4fa0-ac40-0b19d36469f2', protocol='range'}
+2026-03-09T01:04:13.953+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Successfully joined group with generation Generation{generationId=7, memberId='consumer-delivery-group-1-5888888d-2772-4abe-8a57-53c5fade49b5', protocol='range'}
+2026-03-09T01:04:13.960+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Finished assignment for group at generation 7: {consumer-delivery-group-2-fd83f299-a414-4fa0-ac40-0b19d36469f2=Assignment(partitions=[processed-notifications-retry-0]), consumer-delivery-group-1-5888888d-2772-4abe-8a57-53c5fade49b5=Assignment(partitions=[processed-notifications-0])}
+2026-03-09T01:04:13.965+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Successfully synced group in generation Generation{generationId=7, memberId='consumer-delivery-group-2-fd83f299-a414-4fa0-ac40-0b19d36469f2', protocol='range'}
+2026-03-09T01:04:13.965+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Successfully synced group in generation Generation{generationId=7, memberId='consumer-delivery-group-1-5888888d-2772-4abe-8a57-53c5fade49b5', protocol='range'}
+2026-03-09T01:04:13.965+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Notifying assignor about the new Assignment(partitions=[processed-notifications-retry-0])
+2026-03-09T01:04:13.965+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Notifying assignor about the new Assignment(partitions=[processed-notifications-0])
+2026-03-09T01:04:13.966+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Adding newly assigned partitions: processed-notifications-retry-0
+2026-03-09T01:04:13.966+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Adding newly assigned partitions: processed-notifications-0
+2026-03-09T01:04:13.972+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition processed-notifications-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2026-03-09T01:04:13.972+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition processed-notifications-retry-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2026-03-09T01:04:13.972+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : delivery-group: partitions assigned: [processed-notifications-0]
+2026-03-09T01:04:13.972+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : delivery-group: partitions assigned: [processed-notifications-retry-0]
+2026-03-09T01:05:10.833+05:30  WARN 36765 --- [notification-delivery-service] [r-kafka-metrics] i.m.core.instrument.MeterRegistry        : This Gauge has been already registered (MeterId{name='kafka.consumer.reauthentication.latency.max', tags=[tag(client.id=consumer-delivery-group-1),tag(kafka.version=3.8.1),tag(spring.id=kafkaConsumerFactory.consumer-delivery-group-1)]}), the Gauge registration will be ignored. Note that subsequent logs will be logged at debug level.
+2026-03-09T01:13:11.276+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node -1 disconnected.
+2026-03-09T01:13:11.276+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node -1 disconnected.
+2026-03-09T01:23:11.620+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node -1 disconnected.
+2026-03-09T01:23:11.620+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node -1 disconnected.
+2026-03-09T01:25:41.268+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:41.268+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:41.276+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Cancelled in-flight FETCH request with correlation id 2987 due to node 1 being disconnected (elapsed time since creation: 948ms, elapsed time since send: 948ms, throttle time: 0ms, request timeout: 30000ms)
+2026-03-09T01:25:41.276+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Cancelled in-flight FETCH request with correlation id 2989 due to node 1 being disconnected (elapsed time since creation: 937ms, elapsed time since send: 937ms, throttle time: 0ms, request timeout: 30000ms)
+2026-03-09T01:25:41.276+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 2147483646 disconnected.
+2026-03-09T01:25:41.276+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 2147483646 disconnected.
+2026-03-09T01:25:41.656+05:30  INFO 36765 --- [notification-delivery-service] [ delivery-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:41.656+05:30  INFO 36765 --- [notification-delivery-service] [ delivery-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:41.658+05:30  INFO 36765 --- [notification-delivery-service] [ delivery-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Cancelled in-flight API_VERSIONS request with correlation id 2990 due to node 1 being disconnected (elapsed time since creation: 103ms, elapsed time since send: 103ms, throttle time: 0ms, request timeout: 30000ms)
+2026-03-09T01:25:41.658+05:30  INFO 36765 --- [notification-delivery-service] [ delivery-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Cancelled in-flight API_VERSIONS request with correlation id 2988 due to node 1 being disconnected (elapsed time since creation: 104ms, elapsed time since send: 104ms, throttle time: 0ms, request timeout: 30000ms)
+2026-03-09T01:25:41.478+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Error sending fetch request (sessionId=2003348720, epoch=2540) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-03-09T01:25:41.478+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Error sending fetch request (sessionId=1860864748, epoch=2539) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-03-09T01:25:51.705+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:51.705+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:51.706+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Cancelled in-flight API_VERSIONS request with correlation id 2992 due to node 1 being disconnected (elapsed time since creation: 9890ms, elapsed time since send: 9890ms, throttle time: 0ms, request timeout: 30000ms)
+2026-03-09T01:25:51.706+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Cancelled in-flight API_VERSIONS request with correlation id 2990 due to node 1 being disconnected (elapsed time since creation: 9890ms, elapsed time since send: 9890ms, throttle time: 0ms, request timeout: 30000ms)
+2026-03-09T01:25:51.707+05:30  INFO 36765 --- [notification-delivery-service] [ delivery-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 2147483646 disconnected.
+2026-03-09T01:25:51.707+05:30  INFO 36765 --- [notification-delivery-service] [ delivery-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Cancelled in-flight API_VERSIONS request with correlation id 2994 due to node 2147483646 being disconnected (elapsed time since creation: 9670ms, elapsed time since send: 9670ms, throttle time: 0ms, request timeout: 30000ms)
+2026-03-09T01:25:51.707+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Error sending fetch request (sessionId=1860864748, epoch=INITIAL) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-03-09T01:25:51.708+05:30  INFO 36765 --- [notification-delivery-service] [ delivery-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: null. isDisconnected: true. Rediscovery will be attempted.
+2026-03-09T01:25:51.707+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Error sending fetch request (sessionId=2003348720, epoch=INITIAL) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-03-09T01:25:51.911+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:51.911+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:51.911+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Error sending fetch request (sessionId=1860864748, epoch=INITIAL) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-03-09T01:25:52.116+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:52.116+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:52.385+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:52.387+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:52.387+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Error sending fetch request (sessionId=1860864748, epoch=INITIAL) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-03-09T01:25:53.035+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:53.036+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:53.285+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:53.285+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:53.285+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Error sending fetch request (sessionId=1860864748, epoch=INITIAL) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-03-09T01:25:53.841+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:53.841+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:54.285+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:54.287+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:54.287+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Error sending fetch request (sessionId=1860864748, epoch=INITIAL) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-03-09T01:25:54.845+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:54.846+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:55.289+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:55.289+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:55.292+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Error sending fetch request (sessionId=1860864748, epoch=INITIAL) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-03-09T01:25:55.846+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:55.846+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:56.292+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:56.292+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:56.294+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Error sending fetch request (sessionId=1860864748, epoch=INITIAL) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-03-09T01:25:56.843+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:56.843+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:57.153+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 2147483646 disconnected.
+2026-03-09T01:25:57.153+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Cancelled in-flight API_VERSIONS request with correlation id 2992 due to node 2147483646 being disconnected (elapsed time since creation: 15000ms, elapsed time since send: 15000ms, throttle time: 0ms, request timeout: 30000ms)
+2026-03-09T01:25:57.153+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: null. isDisconnected: true. Rediscovery will be attempted.
+2026-03-09T01:25:57.316+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:57.316+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:57.880+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:57.880+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:58.317+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:58.317+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:58.880+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:58.880+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:59.317+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:59.317+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:25:59.790+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:25:59.790+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:00.227+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:00.227+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:00.791+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:00.791+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:01.076+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:01.076+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:01.792+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:01.792+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:02.076+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:02.078+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:02.839+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:02.840+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:03.111+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:03.111+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:03.840+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:03.841+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:04.112+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:04.112+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:04.840+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:04.841+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:05.112+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:05.114+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:05.847+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:05.847+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:06.113+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:06.113+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:06.849+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:06.850+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:07.117+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:07.117+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:07.850+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:07.850+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:08.117+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:08.117+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:08.872+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:08.872+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:09.118+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:09.118+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:09.874+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:09.874+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:10.119+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:10.119+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:10.784+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:10.784+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:11.037+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:11.037+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:11.791+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:11.791+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:12.049+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:12.050+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:12.824+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:12.824+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:13.050+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:13.050+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:13.726+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:13.726+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:14.051+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:14.052+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:14.639+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:14.639+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:14.960+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:14.960+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:15.639+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:15.639+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:15.973+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:15.974+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:16.640+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:16.643+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:16.913+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:16.913+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:16.913+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Error sending fetch request (sessionId=1860864748, epoch=INITIAL) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2026-03-09T01:26:17.680+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:17.680+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:17.959+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:17.959+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:18.687+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:18.687+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:18.864+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:18.864+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:19.696+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:19.696+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:19.874+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:19.875+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:20.699+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:20.699+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:20.875+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:20.876+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:21.709+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:21.709+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:21.877+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:21.877+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:22.709+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:22.709+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:22.892+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:22.892+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:23.713+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:23.713+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:23.892+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:23.892+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:24.714+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:24.714+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:24.801+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:24.801+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:25.703+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:25.703+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:25.707+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:25.708+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:26.610+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:26.611+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:26.708+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:26.710+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:27.612+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:27.612+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:27.709+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:27.709+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:28.614+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:28.614+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:28.709+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:28.710+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:29.570+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:29.574+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:29.737+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:29.737+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:30.584+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:30.584+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:30.762+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:30.764+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:31.518+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:31.518+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:31.770+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:31.770+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:32.530+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:32.532+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:32.758+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:32.758+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:33.442+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:33.442+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:33.758+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:33.758+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:34.443+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:34.443+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:34.668+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:34.669+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:35.444+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:35.444+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:35.565+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:35.565+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:36.445+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:36.445+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:36.566+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:36.566+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:37.459+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:37.459+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:37.567+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:37.567+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:38.463+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:38.464+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:38.567+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:38.567+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:39.465+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:39.465+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:39.568+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:39.568+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:40.466+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:40.466+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:40.569+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:40.569+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:41.372+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:41.372+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:41.569+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:41.569+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:42.394+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:42.410+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:42.569+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:42.570+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:43.395+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:43.398+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:43.546+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:43.546+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:44.402+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:44.402+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:44.547+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:44.547+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:45.406+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:45.406+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:45.549+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:45.552+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:46.408+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:46.408+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:46.549+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:46.549+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:47.409+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:47.409+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:47.549+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:47.550+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:48.410+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:48.410+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:48.550+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:48.550+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:49.410+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:49.410+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:49.550+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:49.553+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:50.411+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:50.411+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:50.551+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:50.551+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:51.411+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:51.411+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:51.552+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:51.553+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:52.411+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:52.412+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:52.589+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:52.589+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:53.412+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:53.412+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:53.589+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:53.589+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:54.413+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:54.413+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:54.590+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:54.591+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:55.414+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:55.414+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:55.591+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:55.591+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:56.432+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:56.432+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:56.593+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:56.594+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:57.433+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:57.433+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:57.595+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:57.598+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:58.435+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:58.436+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:58.599+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:58.599+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:59.436+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:59.436+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:26:59.544+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:26:59.544+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:00.345+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:00.345+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:00.462+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:00.462+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:01.348+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:01.348+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:01.465+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:01.465+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:02.348+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:02.348+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:02.465+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:02.468+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:03.277+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:03.277+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:03.497+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:03.497+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:04.261+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:04.261+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:04.500+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:04.500+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:05.262+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:05.262+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:05.504+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:05.504+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:06.263+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:06.263+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:06.517+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:06.517+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:07.265+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:07.265+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:07.549+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:07.550+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:08.265+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:08.265+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:08.550+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:08.553+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:09.266+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:09.266+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:09.464+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:09.465+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:10.267+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:10.267+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:10.330+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:10.331+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:11.267+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:11.267+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:11.338+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:11.339+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:12.245+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:12.246+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:12.339+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:12.339+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:13.246+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:13.246+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:13.307+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:13.307+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:14.247+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:14.247+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:14.311+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:14.311+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:15.154+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:15.154+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:15.311+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:15.312+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:16.204+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:16.204+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:16.322+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:16.326+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:17.205+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:17.205+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#1-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-2, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-03-09T01:27:17.240+05:30  INFO 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Node 1 disconnected.
+2026-03-09T01:27:17.240+05:30  WARN 36765 --- [notification-delivery-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-delivery-group-1, groupId=delivery-group] Connection to node 1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.

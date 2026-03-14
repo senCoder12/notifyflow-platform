@@ -5,7 +5,9 @@ import org.springframework.stereotype.Service;
 
 import com.notifyflow.delivery.model.ProcessedNotificationEvent;
 
-@Service
+import org.springframework.stereotype.Component;
+
+@Component
 public class DeadLetterProducer {
 
     private final KafkaTemplate<String, ProcessedNotificationEvent> kafkaTemplate;

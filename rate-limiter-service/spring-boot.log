@@ -1,0 +1,129 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.notifyflow:rate-limiter-service >-----------------
+[INFO] Building rate-limiter-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.1:run (default-cli) > test-compile @ rate-limiter-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ rate-limiter-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ rate-limiter-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ rate-limiter-service ---
+[INFO] skip non existing resourceDirectory /Users/mayukh/projects/notifyflow-platform/rate-limiter-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ rate-limiter-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.1:run (default-cli) < test-compile @ rate-limiter-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.1:run (default-cli) @ rate-limiter-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2026-03-09T01:04:08.699+05:30  INFO 36764 --- [rate-limiter-service] [           main] c.n.r.RateLimiterServiceApplication      : Starting RateLimiterServiceApplication using Java 25.0.2 with PID 36764 (/Users/mayukh/projects/notifyflow-platform/rate-limiter-service/target/classes started by mayukh in /Users/mayukh/projects/notifyflow-platform/rate-limiter-service)
+2026-03-09T01:04:08.700+05:30  INFO 36764 --- [rate-limiter-service] [           main] c.n.r.RateLimiterServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-03-09T01:04:09.487+05:30  INFO 36764 --- [rate-limiter-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-09T01:04:09.488+05:30  INFO 36764 --- [rate-limiter-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-09T01:04:09.501+05:30  INFO 36764 --- [rate-limiter-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/mayukh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.34/tomcat-embed-core-10.1.34.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-03-09T01:04:09.780+05:30  INFO 36764 --- [rate-limiter-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-03-09T01:04:09.786+05:30  INFO 36764 --- [rate-limiter-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-09T01:04:09.786+05:30  INFO 36764 --- [rate-limiter-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-03-09T01:04:09.817+05:30  INFO 36764 --- [rate-limiter-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-09T01:04:09.817+05:30  INFO 36764 --- [rate-limiter-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1099 ms
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/Users/mayukh/.m2/repository/io/netty/netty-common/4.1.116.Final/netty-common-4.1.116.Final.jar)
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+2026-03-09T01:04:10.303+05:30  INFO 36764 --- [rate-limiter-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-03-09T01:04:10.336+05:30  INFO 36764 --- [rate-limiter-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-03-09T01:04:10.345+05:30  INFO 36764 --- [rate-limiter-service] [           main] c.n.r.RateLimiterServiceApplication      : Started RateLimiterServiceApplication in 2.049 seconds (process running for 2.228)
+2026-03-09T01:05:41.531+05:30  INFO 36764 --- [rate-limiter-service] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-09T01:05:41.531+05:30  INFO 36764 --- [rate-limiter-service] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-09T01:05:41.533+05:30  INFO 36764 --- [rate-limiter-service] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-09T01:25:42.171+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/127.0.0.1:6379
+2026-03-09T01:25:57.328+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection reset
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:399) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:431) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:489) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.116.Final.jar:4.1.116.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-03-09T01:25:57.564+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:25:57.572+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:26:06.569+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-3] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:26:06.575+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-4] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:26:09.201+05:30  WARN 36764 --- [rate-limiter-service] [oundedElastic-2] o.s.b.a.d.r.RedisReactiveHealthIndicator : Redis health check failed
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:399) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.implRead(SocketChannelImpl.java:431) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:489) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.116.Final.jar:4.1.116.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.116.Final.jar:4.1.116.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-03-09T01:26:14.864+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:26:14.867+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:26:31.265+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-5] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:26:31.267+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-6] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:27:01.368+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-7] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:27:01.370+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-7] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:27:31.465+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:27:31.927+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-8] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:28:01.966+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:28:01.970+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-9] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:28:32.065+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:28:32.075+05:30  WARN 36764 --- [rate-limiter-service] [oEventLoop-4-10] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:29:02.165+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:29:02.169+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-1] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:29:32.270+05:30  INFO 36764 --- [rate-limiter-service] [ecutorLoop-1-10] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:29:32.277+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:30:02.367+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-2] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:30:02.371+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-3] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:30:32.468+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-4] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:30:32.473+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-4] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:31:02.569+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-6] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:31:02.573+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-5] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2026-03-09T01:31:32.667+05:30  INFO 36764 --- [rate-limiter-service] [xecutorLoop-1-8] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/<unresolved>:6379
+2026-03-09T01:31:32.707+05:30  WARN 36764 --- [rate-limiter-service] [ioEventLoop-4-6] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379

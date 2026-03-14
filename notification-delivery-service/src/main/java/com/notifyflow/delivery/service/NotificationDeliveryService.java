@@ -7,6 +7,9 @@ import com.notifyflow.delivery.producer.DeadLetterProducer;
 import com.notifyflow.delivery.producer.DeliveryStatusProducer;
 import com.notifyflow.delivery.producer.RetryProducer;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class NotificationDeliveryService {
 
     private final RetryProducer retryProducer;

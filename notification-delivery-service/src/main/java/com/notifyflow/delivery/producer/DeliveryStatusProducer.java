@@ -4,6 +4,9 @@ import org.springframework.kafka.core.KafkaTemplate;
 
 import com.notifyflow.delivery.model.DeliveryStatusEvent;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class DeliveryStatusProducer {
     private final KafkaTemplate<String, DeliveryStatusEvent> kafkaTemplate;
 
